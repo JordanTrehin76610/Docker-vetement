@@ -42,7 +42,8 @@ require_once '../produit/Vetement.php'
     if (isset($_GET['type'])) { //on regarde donc si il y a un paramètre, isset permet d'esquiver l'erreur si il n'y a rien
         $trie = array_filter($Vetement, function ($item) { //On filtre pour avoir uniquement le tableau dont la clé correspond au paramètre
             return $item['type'] == $_GET['type'];
-        }); ?>
+        });
+        shuffle($trie); ?>
     <p class="w-75 mx-auto container fs-2 categorie"> <?= $_GET['type'] ?> </p>
     <?php } else {
         $trie = $Vetement; //Sinon rien ne change 
