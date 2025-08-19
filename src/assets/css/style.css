@@ -1,0 +1,101 @@
+/* Accueil */
+
+.containerImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 12rem;
+    width: 10rem;
+}
+.fillImg {
+    min-width: 100%;
+    min-height: 100%;
+}
+.prix {
+    background-color: green;
+    color: white;
+    margin-right: 3rem;
+}
+.categorie {
+    text-align: left;
+}
+.contenue {
+    width: 75%;
+}
+
+
+
+
+/* Detail */
+
+.containerMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 45rem;
+    width: 40rem;
+}
+.fillMain {
+    min-width: 100%;
+    min-height: 100%;
+}
+.containerGalerie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 45%;
+}
+.fillGalerie {
+    width: 100%;
+    height: 100%;
+}
+.prixDetail {
+    background-color: green;
+    color: white;
+    padding-right: 6rem;
+    margin-left: 0.5rem;
+}
+.acheter {
+    margin-top: 24.5rem;
+}
+.bouton {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+
+@media (max-width: 480px) {
+    .prix {
+        background-color: green;
+        color: white;
+        margin-right: 3rem;
+    }
+
+    .containerMain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+    .prixDetail {
+        background-color: green;
+        color: white;
+        padding-right: 5rem;
+    }
+    .acheter {
+        margin-top: 0rem;
+    }
+    .categorie {
+        text-align: center;
+    }
+    .contenue {
+        width: 100%;
+    }
+}
