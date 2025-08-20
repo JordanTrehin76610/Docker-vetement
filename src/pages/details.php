@@ -16,6 +16,7 @@ require_once '../produit/Vetement.php'
 
 
 <body>
+    <?php $erreur = 0 ?>
     <h1 class="text-center my-2"><a href="accueil.php" class="nav-link">Cebo</a></h1>
     <div class="container text-center">
         <div class="row">
@@ -40,15 +41,19 @@ require_once '../produit/Vetement.php'
 
     <?php
     if (isset($_GET['id'])) { //on regarde donc si il y a un paramètre, isset permet d'esquiver l'erreur si il n'y a rien
+        $type = $_GET['id'];
+        if ($type > 12 || $type < 1 ){
+            $erreur = 1;
+        } else {
         $trie = array_filter($Vetement, function ($item) { //On filtre pour avoir uniquement le tableau dont la clé correspond au paramètre
             return $item['id'] == $_GET['id'];
         });
-    } else {
+    }} else {
         $trie = $Vetement; //Sinon rien ne change
     }
     ?>
 
-
+    <?php if ($erreur == 0) { ?>
     <div class="w-75 mx-auto container mb-5">
         <p class="fs-2"> <?= $trie[$_GET['id']-1]['type'] ?> </p>
         <div class="row">
@@ -92,6 +97,11 @@ require_once '../produit/Vetement.php'
             </div>
         </div>
     </div>
+    <?php }
+    else { ?>
+    <p class="text-center fs-1">Erreur 404 </p>
+    <p class="text-center fs-1 mt-3">Marche po</p>
+    <?php } ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">

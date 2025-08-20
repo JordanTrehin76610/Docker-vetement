@@ -93,7 +93,8 @@ require_once '../produit/Vetement.php'
         </div>
     </div> <?php }
     else { ?>
-    <p class="text-center fs-1">Marche po</p>
+    <p class="text-center fs-1">Erreur 404 </p>
+    <p class="text-center fs-1 mt-3">Marche po</p>
     <?php } ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
